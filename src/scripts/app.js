@@ -1,1 +1,3 @@
-console.log("Hello world!");
+import BurgerMenu from "./components/BurgerMenu.js";
+
+new BurgerMenu();

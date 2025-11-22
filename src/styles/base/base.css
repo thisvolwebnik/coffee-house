@@ -1,4 +1,4 @@
-html {
+html.is-lock {
   overflow: hidden;
 }
 
@@ -9,7 +9,6 @@ body {
   font-family: Inter, sans-serif;
   color: var(--color-text-dark);
   background-color: var(--color-background-body);
-  overflow: hidden;
 }
 
 main {

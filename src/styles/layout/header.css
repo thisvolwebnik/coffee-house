@@ -56,18 +56,14 @@
 }
 
 @media (width <= 1023px) {
-  .header {
-    position: relative;
-  }
-
   .header__overlay {
-    position: absolute;
+    position: fixed;
     inset: var(--header-height) 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 100px;
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - var(--header-height));
     padding-top: 60px;
     translate: 100vw;
