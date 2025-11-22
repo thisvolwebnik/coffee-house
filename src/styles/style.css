@@ -10,7 +10,8 @@
 /* Components */
 @import url("./components/logo.css");
 @import url("./components/burger-button.css");
+@import url("./components/socials.css");
 
 /* Layout */
-
 @import url("./layout/header.css");
+@import url("./layout/footer.css");

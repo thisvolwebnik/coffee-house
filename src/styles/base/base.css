@@ -31,6 +31,10 @@ button:active {
   padding-inline: var(--container-padding-x);
 }
 
+.text-accent {
+  color: var(--color-text-accent);
+}
+
 :focus-visible {
   outline: 2px dashed var(--color-text-dark);
   outline-offset: 4px;
