@@ -1,0 +1,15 @@
+.logo {
+  transition-duration: var(--transition-duration);
+}
+
+@media (hover: hover) {
+  .logo:hover {
+    opacity: 0.75;
+    transform: scale(1.05);
+  }
+}
+
+.logo:active {
+  opacity: 0.75;
+  transform: scale(0.95);
+}

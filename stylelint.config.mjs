@@ -4,5 +4,6 @@ export default {
   rules: {
     "media-feature-range-notation": "context",
     "media-query-no-invalid": null,
+    "selector-class-pattern": null,
   },
 };

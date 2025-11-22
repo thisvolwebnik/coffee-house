@@ -1,17 +1,39 @@
+html {
+  overflow: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
   padding-block: 20px 40px;
+  font-family: Inter, sans-serif;
   color: var(--color-text-dark);
   background-color: var(--color-background-body);
+  overflow: hidden;
 }
 
 main {
   flex-grow: 1;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active,
+button:active {
+  transform: scale(0.95);
+}
+
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+}
+
+:focus-visible {
+  outline: 2px dashed var(--color-text-dark);
+  outline-offset: 4px;
+  transition-duration: 0s !important;
 }

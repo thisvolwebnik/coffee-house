@@ -16,6 +16,12 @@
   /* Container */
   --container-width: 1360px;
   --container-padding-x: 40px;
+
+  /* Transition */
+  --transition-duration: 0.2s;
+
+  /* Border */
+  --border-dark: 1px solid var(--color-border-dark);
 }
 
 @media (width <= 768px) {

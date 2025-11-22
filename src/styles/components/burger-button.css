@@ -1,0 +1,55 @@
+.burger-button {
+  --burger-button-size: 44px;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 8px;
+  width: var(--burger-button-size);
+  height: var(--burger-button-size);
+  color: var(--color-text-dark);
+  background: transparent;
+  border: var(--border-dark);
+  border-radius: 50%;
+  touch-action: manipulation;
+  transition-duration: var(--transition-duration);
+}
+
+.burger-button__line {
+  background-color: currentcolor;
+  width: 20px;
+  height: 2px;
+  border-radius: 10px;
+  transition-duration: var(--transition-duration);
+}
+
+.burger-button.is-active {
+  .burger-button__line:first-child {
+    rotate: -45deg;
+    translate: 0 5px;
+  }
+
+  .burger-button__line:last-child {
+    rotate: 45deg;
+    translate: 0 -5px;
+  }
+}
+
+@media (width <= 1023px) {
+  .burger-button {
+    display: flex;
+  }
+}
+
+@media (hover: hover) {
+  .burger-button:hover {
+    background-color: var(--color-border-dark);
+    color: var(--color-text-accent);
+  }
+}
+
+.burger-button:active {
+  background-color: var(--color-border-dark);
+  color: var(--color-text-accent);
+}
