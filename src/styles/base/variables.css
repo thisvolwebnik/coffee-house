@@ -1,0 +1,25 @@
+:root {
+  /* Color Text */
+  --color-text-dark: #403f3d;
+  --color-text-light: #e1d4c9;
+  --color-text-accent: #b0907a;
+
+  /* Color Background */
+  --color-background-body: #e1d4c9;
+  --color-background-container: #665f55;
+  --color-background-backdrop: rgb(64 63 61 / 80%);
+
+  /* Color Border */
+  --color-border-light: #c1b6ad;
+  --color-border-dark: #665f55;
+
+  /* Container */
+  --container-width: 1360px;
+  --container-padding-x: 40px;
+}
+
+@media (width <= 768px) {
+  :root {
+    --container-padding-x: 16px;
+  }
+}

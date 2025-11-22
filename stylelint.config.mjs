@@ -2,6 +2,7 @@
 export default {
   extends: ["stylelint-config-standard"],
   rules: {
-    "number-leading-zero": "always",
+    "media-feature-range-notation": "context",
+    "media-query-no-invalid": null,
   },
 };

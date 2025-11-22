@@ -1,0 +1,74 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+a,
+button,
+.burger-link,
+.caption {
+  font-weight: 600;
+}
+
+h1,
+.h1 {
+  font-size: 72px;
+  line-height: 1.05;
+}
+
+h1.accent,
+.h1.accent {
+  font-style: italic;
+}
+
+h2,
+.h2 {
+  font-size: 60px;
+  line-height: 1.25;
+}
+
+h2.accent,
+.h2.accent {
+  font-style: italic;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a,
+button {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.burger-link {
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+@media (width <= 768px) {
+  h1,
+  .h1 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  h2,
+  .h2 {
+    font-size: 32px;
+  }
+}
