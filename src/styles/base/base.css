@@ -32,6 +32,7 @@ button:active {
 }
 
 .text-accent {
+  font-style: italic !important;
   color: var(--color-text-accent);
 }
 

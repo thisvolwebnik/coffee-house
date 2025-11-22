@@ -1,0 +1,31 @@
+.hero {
+  padding-top: 20px;
+  color: var(--color-text-light);
+}
+
+.hero__inner {
+  display: grid;
+  align-items: center;
+  min-height: 645px;
+  padding: 100px;
+  background: url("../../assets/images/img-hero.jpg") center/cover no-repeat;
+  border-radius: 40px;
+}
+
+.hero__body {
+  display: grid;
+  row-gap: 40px;
+  max-width: 530px;
+}
+
+@media (width <= 1023px) {
+  .hero__inner {
+    padding-inline: 60px;
+  }
+}
+
+@media (width <= 767px) {
+  .hero__inner {
+    padding: 60px 16px;
+  }
+}
