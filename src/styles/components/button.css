@@ -47,3 +47,28 @@
 .button-primary:active > span {
   translate: 0;
 }
+
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+  width: 100%;
+  max-width: 200px;
+  height: 64px;
+  padding-left: 20px;
+  border: var(--border-dark);
+  border-radius: 100px;
+}
+
+.button-secondary__body {
+  display: grid;
+  row-gap: 2px;
+}
+
+.button-secondary__icon {
+  --size-button-secondary-icon: 36px;
+
+  display: inline-flex;
+  width: var(--size-button-secondary-icon);
+  height: var(--size-button-secondary-icon);
+}
