@@ -72,3 +72,17 @@
   width: var(--size-button-secondary-icon);
   height: var(--size-button-secondary-icon);
 }
+
+@media (hover: hover) {
+  .button-secondary:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-background-container);
+    border-color: var(--color-background-container);
+  }
+}
+
+.button-secondary:active {
+  color: var(--color-text-light);
+  background-color: var(--color-background-container);
+  border-color: var(--color-background-container);
+}

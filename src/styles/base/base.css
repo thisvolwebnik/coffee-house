@@ -20,13 +20,23 @@ a {
   color: inherit;
 }
 
-a:active,
-button:active {
-  transform: scale(0.95);
+a,
+input,
+button,
+label,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
 }
 
 button {
   white-space: nowrap;
+}
+
+a:active,
+button:active {
+  transform: scale(0.95);
 }
 
 .container {
