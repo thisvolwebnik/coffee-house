@@ -1,0 +1,11 @@
+.favorite {
+  padding-top: 100px;
+}
+
+.favorite__title {
+  text-align: center;
+}
+
+.favorite__slider {
+  padding-top: 40px;
+}
