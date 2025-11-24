@@ -8,7 +8,7 @@
   align-items: center;
   min-height: 645px;
   padding: 100px;
-  background: url("../../assets/images/img-hero.jpg") center/cover no-repeat;
+  background: url("@images/img-hero.jpg") center/cover no-repeat;
   border-radius: 40px;
 }
 

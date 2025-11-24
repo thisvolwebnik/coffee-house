@@ -9,6 +9,7 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { js, prettier: eslintPluginPrettier },
     extends: ["js/recommended", eslintConfigPrettier],
+    ignores: ["node_modules/**", "dist/**", "vite.config.js"],
     rules: {
       ...eslintPluginPrettier.configs.recommended.rules,
       "no-console": "warn",
