@@ -222,9 +222,9 @@
           Choose your <span class="text-accent">favorite</span> coffee
         </h2>
         <div class="favorite__slider">
-          <div class="slider">
-            <div class="slider__container">
-              <div class="slider__slide is-active">
+          <div class="slider" data-js-slider>
+            <div class="slider__container" data-js-slider-container>
+              <div class="slider__slide is-active" data-js-slider-slide>
                 <img
                   class="slider__slide-image"
                   src="./assets/images/favorite/coffee-slider-1.png"
@@ -240,8 +240,8 @@
                   </div>
                   <p class="slider__slide-price h3">$5.50</p>
                 </div>
-              </div>
-              <div class="slider__slide">
+              </div >
+              <div class="slider__slide" data-js-slider-slide>
                 <img
                   class="slider__slide-image"
                   src="./assets/images/favorite/coffee-slider-2.png"
@@ -258,7 +258,7 @@
                   <p class="slider__slide-price h3">$5.00</p>
                 </div>
               </div>
-              <div class="slider__slide">
+              <div class="slider__slide" data-js-slider-slide>
                 <img
                   class="slider__slide-image"
                   src="./assets/images/favorite/coffee-slider-3.png"
@@ -281,8 +281,9 @@
               type="button"
               aria-label="Prev slide"
               title="Prev slide"
+              data-js-slider-button-prev
             >
-          <span class="slider__button-icon">
+              <span class="slider__button-icon">
             <svg
               width="24"
               height="24"
@@ -304,8 +305,9 @@
               type="button"
               aria-label="Next slide"
               title="Next slide"
+              data-js-slider-button-next
             >
-          <span class="slider__button-icon">
+              <span class="slider__button-icon">
             <svg
               width="24"
               height="24"
@@ -323,9 +325,9 @@
           </span>
             </button>
             <div class="slider__indicators">
-              <span class="slider__indicator is-active"></span>
-              <span class="slider__indicator"></span>
-              <span class="slider__indicator"></span>
+              <span class="slider__indicator is-active" data-js-slider-indicator></span>
+              <span class="slider__indicator" data-js-slider-indicator></span>
+              <span class="slider__indicator" data-js-slider-indicator></span>
             </div>
           </div>
         </div>
