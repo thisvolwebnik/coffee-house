@@ -14,6 +14,7 @@ class Slider {
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root);
+    if (!this.rootElement) return;
     this.sliderContainerelement = this.rootElement.querySelector(
       this.selectors.sliderContainer
     );

@@ -93,7 +93,7 @@
       </nav>
       <a
         href="./menu.html"
-        class="header__link-menu"
+        class="header__link-menu is-active"
       >
         <span>Menu</span>
         <span>
@@ -101,6 +101,7 @@
           width="20"
           height="20"
           viewBox="0 0 20 20"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -149,7 +150,145 @@
     </button>
   </div>
 </header>
-<main class="main"></main>
+<main class="main">
+  <section
+    class="menu"
+    aria-labelledby="menu-title"
+  >
+    <div class="menu__inner container">
+      <h2
+        class="menu__title"
+        id="menu-title"
+      >Behind each of our cups hides an
+        <span class="text-accent">amazing surprise</span>
+      </h2>
+      <div class="menu__body tabs" data-js-tabs>
+        <div
+          class="tabs__button-list"
+          role="tablist"
+        >
+          <button
+            class="tabs__button is-active"
+            id="tab-1"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="tabpanel-coffee"
+            data-js-tabs-button
+          >
+            <span class="tabs__button-icon">
+              <img
+                class="tabs__button-image"
+                src="../assets/images/tabs/coffee.png"
+                alt="Coffee"
+                width="16"
+                height="16"
+                loading="lazy"
+              >
+            </span>
+            <span class="tabs__button-text">Coffee</span>
+          </button>
+          <button
+            class="tabs__button"
+            id="tab-2"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tabpanel-tea"
+            data-js-tabs-button
+          >
+            <span class="tabs__button-icon">
+              <img
+                class="tabs__button-image"
+                src="../assets/images/tabs/tea.png"
+                alt="Tea"
+                width="16"
+                height="16"
+                loading="lazy"
+              >
+            </span>
+            <span class="tabs__button-text">Tea</span>
+          </button>
+          <button
+            class="tabs__button"
+            id="tab-3"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tabpanel-desert"
+            data-js-tabs-button
+          >
+            <span class="tabs__button-icon">
+              <img
+                class="tabs__button-image"
+                src="../assets/images/tabs/dessert.png"
+                alt="Desert"
+                width="16"
+                height="16"
+                loading="lazy"
+              >
+            </span>
+            <span class="tabs__button-text">Desert</span>
+          </button>
+        </div>
+        <div
+          class="tabs__content is-active"
+          role="tabpanel"
+          id="tabpanel-coffee"
+          aria-labelledby="tab-1"
+          data-js-tabs-content
+        >
+        </div>
+        <div
+          class="tabs__content"
+          role="tabpanel"
+          id="tabpanel-tea"
+          aria-labelledby="tab-2"
+          data-js-tabs-content
+        >
+        </div>
+        <div
+          class="tabs__content"
+          role="tabpanel"
+          id="tabpanel-desert"
+          aria-labelledby="tab-3"
+          data-js-tabs-content
+        >
+        </div>
+        <button
+          class="tabs__load-more"
+          type="button"
+          aria-label="Load more"
+          title="Load more"
+          data-js-tabs-load-more
+        >
+          <span class="tabs__load-more-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+                stroke="#403F3D"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"
+                stroke="#403F3D"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
 <footer
   class="footer"
   id="contact-us"
@@ -174,6 +313,7 @@
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
+                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -197,6 +337,7 @@
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
+                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -230,6 +371,7 @@
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
+                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -258,6 +400,7 @@
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
               <path
@@ -288,6 +431,7 @@
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
               <path
@@ -309,6 +453,7 @@
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
               <g clip-path="url(#clip0_217_1736)">

@@ -1,0 +1,42 @@
+.card {
+  display: grid;
+  width: 310px;
+  border: var(--border-light);
+  border-radius: 40px;
+}
+
+.card__image-wrapper {
+  --size-card-image-wrapper: 310px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size-card-image-wrapper);
+  height: var(--size-card-image-wrapper);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 340px;
+  height: 340px;
+  object-fit: contain;
+  transform: scale(1.1);
+  transition-duration: var(--transition-duration);
+}
+
+.card__body {
+  display: grid;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+.card__price {
+  margin-top: auto;
+}
+
+@media (hover: hover) {
+  .card:hover .card__image {
+    transform: scale(1);
+  }
+}

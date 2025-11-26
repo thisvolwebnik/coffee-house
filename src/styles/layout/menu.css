@@ -1,0 +1,15 @@
+.menu {
+  padding: 20px 0 100px;
+}
+
+.menu__title {
+  max-width: 800px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.menu__body {
+  display: grid;
+  row-gap: 40px;
+  padding-top: 40px;
+}

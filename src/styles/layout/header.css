@@ -48,6 +48,14 @@
   transition-duration: var(--transition-duration);
 }
 
+.header__link-menu.is-active {
+  pointer-events: none;
+}
+
+.header__link-menu.is-active::after {
+  width: 100%;
+}
+
 @media (hover: hover) {
   .header__menu-link:hover::after,
   .header__link-menu:hover::after {

@@ -1,0 +1,113 @@
+.tabs__button-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.tabs__button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 8px 16px 8px 8px;
+  color: var(--color-text-dark);
+  background-color: transparent;
+  border: var(--border-light);
+  border-radius: 100px;
+}
+
+.tabs__button-icon {
+  --size-tabs-button-icon: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-tabs-button-icon);
+  height: var(--size-tabs-button-icon);
+  background-color: var(--color-border-light);
+  border-radius: 50%;
+}
+
+.tabs__button.is-active {
+  color: var(--color-text-light);
+  background-color: var(--color-background-container);
+  border-color: var(--color-background-container);
+  pointer-events: none;
+}
+
+.tabs__button.is-active .tabs__button-icon {
+  background-color: var(--color-background-body);
+}
+
+.tabs__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-self: center;
+  gap: 40px;
+}
+
+.tabs__content:not(.is-active) {
+  display: none;
+}
+
+.tabs__load-more {
+  --size-load-more-button: 60px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  width: var(--size-load-more-button);
+  height: var(--size-load-more-button);
+  background-color: transparent;
+  border: var(--border-dark);
+  border-radius: 50%;
+}
+
+.tabs__load-more-icon {
+  --size-load-more-icon: 24px;
+
+  display: flex;
+  width: var(--size-load-more-icon);
+  height: var(--size-load-more-icon);
+}
+
+@media (hover: hover) {
+  .tabs__button:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-background-container);
+    border-color: var(--color-background-container);
+  }
+
+  .tabs__button:hover .tabs__button-icon {
+    background-color: var(--color-background-body);
+  }
+
+  .tabs__load-more:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-background-container);
+    border-color: var(--color-background-container);
+  }
+}
+
+@media (width <= 1439px) {
+  .tabs__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width <= 1100px) {
+  .tabs__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tabs__content-card:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media (width <= 767px) {
+  .tabs__content {
+    grid-template-columns: 1fr;
+  }
+}
