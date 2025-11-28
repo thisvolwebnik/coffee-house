@@ -79,7 +79,7 @@ class Tabs {
     return cards
       .map(
         (card) => `
-      <div class="tabs__content-card card" data-card-id="${card.id}" data-js-card="${tabName}">
+      <div class="tabs__content-card card" data-card-id="${card.id}" data-js-card="${tabName}" data-price="${card.price}">
         <div class="card__image-wrapper">
           <img
             class="card__image"
@@ -95,7 +95,7 @@ class Tabs {
           <div class="card__description">
             <p>${card.description}</p>
           </div>
-          <p class="card__price h3">${card.price}</p>
+          <p class="card__price h3" data-price="${card.price}">$${card.price}</p>
         </div>
       </div>
     `

@@ -123,7 +123,6 @@ class Slider {
 
     this.touchEndX = e.touches[0].clientX;
 
-    // Используем requestAnimationFrame для плавности
     this.animationFrameId = requestAnimationFrame(() => {
       const diff = this.touchEndX - this.touchStartX;
       const currentOffset = -this.currentIndex * 100;

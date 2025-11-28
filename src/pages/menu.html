@@ -288,6 +288,139 @@
                 </svg>
               </span>
         </button>
+        <div class="modal" hidden data-js-modal>
+          <h2 class="visually-hidden">Modal window</h2>
+          <div class="modal__card">
+            <div class="modal__image-wrapper">
+              <img
+                class="modal__image"
+                src="../assets/images/coffee/coffee-1.jpg"
+                alt="Irish coffee"
+                width="340"
+                height="340"
+                loading="lazy"
+                data-js-modal-image
+              >
+            </div>
+            <div class="modal__body">
+              <div class="modal__text">
+                <h3 class="modal__title" data-js-modal-title>Irish coffee</h3>
+                <div class="modal__description" data-js-modal-description>
+                  <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                </div>
+              </div>
+              <form
+                class="modal__form"
+                data-js-modal-form
+              >
+                <fieldset class="modal__form-group" data-js-modal-form-size>
+                  <legend class="modal__form-name">Size</legend>
+                  <input
+                    class="modal__form-input visually-hidden"
+                    id="size-1"
+                    type="radio"
+                    name="size"
+                    value="200 ml"
+                    checked
+                  >
+                  <label
+                    class="modal__form-label"
+                    for="size-1"
+                  >
+                    <span class="modal__form-label-icon link-button">S</span>
+                    <span class="modal__form-label-name link-button">200 ml</span>
+                  </label>
+                  <input
+                    class="modal__form-input visually-hidden"
+                    id="size-2"
+                    type="radio"
+                    name="size"
+                    value="300 ml"
+                  >
+                  <label
+                    class="modal__form-label"
+                    for="size-2"
+                  >
+                    <span class="modal__form-label-icon link-button">M</span>
+                    <span class="modal__form-label-name link-button">300 ml</span>
+                  </label>
+                  <input
+                    class="modal__form-input visually-hidden"
+                    id="size-3"
+                    type="radio"
+                    name="size"
+                    value="400 ml"
+                  >
+                  <label
+                    class="modal__form-label"
+                    for="size-3"
+                  >
+                    <span class="modal__form-label-icon link-button">L</span>
+                    <span class="modal__form-label-name link-button">400 ml</span>
+                  </label>
+                </fieldset>
+                <fieldset class="modal__form-group" data-js-modal-form-additives>
+                  <legend class="modal__form-name">Additives</legend>
+                  <input
+                    class="modal__form-input visually-hidden"
+                    id="additives-1"
+                    type="checkbox"
+                    name="additives"
+                    value="Sugar"
+                  >
+                  <label
+                    class="modal__form-label"
+                    for="additives-1"
+                  >
+                    <span class="modal__form-label-icon link-button">1</span>
+                    <span class="modal__form-label-name link-button">Sugar</span>
+                  </label>
+                  <input
+                    class="modal__form-input visually-hidden"
+                    id="additives-2"
+                    type="checkbox"
+                    name="additives"
+                    value="Cinnamon"
+                  >
+                  <label
+                    class="modal__form-label"
+                    for="additives-2"
+                  >
+                    <span class="modal__form-label-icon link-button">2</span>
+                    <span class="modal__form-label-name link-button">Cinnamon</span>
+                  </label>
+                  <input
+                    class="modal__form-input visually-hidden"
+                    id="additives-3"
+                    type="checkbox"
+                    name="additives"
+                    value="Syrup"
+                  >
+                  <label
+                    class="modal__form-label"
+                    for="additives-3"
+                  >
+                    <span class="modal__form-label-icon link-button">3</span>
+                    <span class="modal__form-label-name link-button">Syrup</span>
+                  </label>
+                </fieldset>
+                <p class="modal__form-total h3">Total:
+                  <span class="modal__form-price" data-js-modal-price>$7.00</span>
+                </p>
+                <div class="modal__alert">
+                  <span class="modal__alert-icon"></span>
+                  <p class="modal__alert-text caption">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+                </div>
+                <button
+                  class="modal__form-button"
+                  type="submit"
+                  data-js-modal-button
+                >Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -495,135 +628,5 @@
     </div>
   </div>
 </footer>
-<div class="modal" hidden>
-  <h2 class="visually-hidden">Modal window</h2>
-  <div class="modal__card">
-    <div class="modal__image-wrapper">
-      <img
-        class="modal__image"
-        src="../assets/images/coffee/coffee-1.jpg"
-        alt="Irish coffee"
-        width="340"
-        height="340"
-        loading="lazy"
-      >
-    </div>
-    <div class="modal__body">
-      <div class="modal__text">
-        <h3 class="modal__title">Irish coffee</h3>
-        <div class="modal__description">
-          <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-        </div>
-      </div>
-      <form
-        class="modal__form"
-      >
-        <fieldset class="modal__form-group">
-          <legend class="modal__form-name">Size</legend>
-          <input
-            class="modal__form-input visually-hidden"
-            id="size-1"
-            type="radio"
-            name="size"
-            value="200 ml"
-            checked
-          >
-          <label
-            class="modal__form-label"
-            for="size-1"
-          >
-            <span class="modal__form-label-icon link-button">S</span>
-            <span class="modal__form-label-name link-button">200 ml</span>
-          </label>
-          <input
-            class="modal__form-input visually-hidden"
-            id="size-2"
-            type="radio"
-            name="size"
-            value="300 ml"
-          >
-          <label
-            class="modal__form-label"
-            for="size-2"
-          >
-            <span class="modal__form-label-icon link-button">M</span>
-            <span class="modal__form-label-name link-button">300 ml</span>
-          </label>
-          <input
-            class="modal__form-input visually-hidden"
-            id="size-3"
-            type="radio"
-            name="size"
-            value="400 ml"
-          >
-          <label
-            class="modal__form-label"
-            for="size-3"
-          >
-            <span class="modal__form-label-icon link-button">L</span>
-            <span class="modal__form-label-name link-button">400 ml</span>
-          </label>
-        </fieldset>
-        <fieldset class="modal__form-group">
-          <legend class="modal__form-name">Additives</legend>
-          <input
-            class="modal__form-input visually-hidden"
-            id="additives-1"
-            type="checkbox"
-            name="additives"
-            value="Sugar"
-          >
-          <label
-            class="modal__form-label"
-            for="additives-1"
-          >
-            <span class="modal__form-label-icon link-button">1</span>
-            <span class="modal__form-label-name link-button">Sugar</span>
-          </label>
-          <input
-            class="modal__form-input visually-hidden"
-            id="additives-2"
-            type="checkbox"
-            name="additives"
-            value="Cinnamon"
-          >
-          <label
-            class="modal__form-label"
-            for="additives-2"
-          >
-            <span class="modal__form-label-icon link-button">2</span>
-            <span class="modal__form-label-name link-button">Cinnamon</span>
-          </label>
-          <input
-            class="modal__form-input visually-hidden"
-            id="additives-3"
-            type="checkbox"
-            name="additives"
-            value="Syrup"
-          >
-          <label
-            class="modal__form-label"
-            for="additives-3"
-          >
-            <span class="modal__form-label-icon link-button">3</span>
-            <span class="modal__form-label-name link-button">Syrup</span>
-          </label>
-        </fieldset>
-        <p class="modal__form-total h3">Total:
-          <span class="modal__form-price">$7.00</span>
-        </p>
-        <div class="modal__alert">
-          <span class="modal__alert-icon"></span>
-          <p class="modal__alert-text caption">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
-        </div>
-        <button
-          class="modal__form-button"
-          type="submit"
-        >Close
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
 </body>
 </html>
