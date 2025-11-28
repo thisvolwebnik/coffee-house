@@ -66,12 +66,12 @@ class Tabs {
       const panel = this.rootElement.querySelector(`#tabpanel-${tabName}`);
       if (panel) {
         const cards = cardsData[tabName];
-        panel.innerHTML = this.generateCardsHtml(cards);
+        panel.innerHTML = this.generateCardsHtml(cards, tabName);
       }
     });
   }
 
-  generateCardsHtml(cards) {
+  generateCardsHtml(cards, tabName) {
     if (cards.length === 0) {
       return '<div class="no-cards">No items available</div>';
     }
@@ -79,7 +79,7 @@ class Tabs {
     return cards
       .map(
         (card) => `
-      <div class="tabs__content-card card" data-card-id="${card.id}">
+      <div class="tabs__content-card card" data-card-id="${card.id}" data-js-card="${tabName}">
         <div class="card__image-wrapper">
           <img
             class="card__image"

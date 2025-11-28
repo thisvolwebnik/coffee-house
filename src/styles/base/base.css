@@ -34,6 +34,11 @@ button {
   white-space: nowrap;
 }
 
+button,
+label {
+  user-select: none;
+}
+
 a:active,
 button:active {
   transform: scale(0.95);
@@ -48,6 +53,18 @@ button:active {
 .text-accent {
   font-style: italic !important;
   color: var(--color-text-accent);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  overflow: hidden;
 }
 
 :focus-visible {

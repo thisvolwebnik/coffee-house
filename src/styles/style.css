@@ -15,6 +15,7 @@
 @import url("./components/slider.css");
 @import url("./components/tabs.css");
 @import url("./components/card.css");
+@import url("./components/modal.css");
 
 /* Layout */
 @import url("./layout/header.css");
