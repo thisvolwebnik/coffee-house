@@ -50,6 +50,10 @@
   display: none;
 }
 
+.tabs__content.is-visible .tabs__content-card {
+  display: block;
+}
+
 .tabs__load-more {
   --size-load-more-button: 60px;
 
@@ -70,6 +74,10 @@
   display: flex;
   width: var(--size-load-more-icon);
   height: var(--size-load-more-icon);
+}
+
+.tabs__load-more.is-active {
+  display: flex;
 }
 
 @media (hover: hover) {

@@ -23,6 +23,7 @@ class Modal {
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root);
+    if (!this.rootElement) return;
     this.contentElements = this.rootElement.querySelectorAll(
       this.selectors.content
     );

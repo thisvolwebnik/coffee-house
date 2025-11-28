@@ -1,4 +1,4 @@
-import { cardsData } from "@/scripts/data/cardsData.js";
+import { cardsData } from "../data/cardsData.js";
 
 class Tabs {
   selectors = {
@@ -10,6 +10,7 @@ class Tabs {
 
   stateClasses = {
     isActive: "is-active",
+    isVisible: "is-visible",
   };
 
   stateAria = {
@@ -19,7 +20,7 @@ class Tabs {
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root);
     if (!this.rootElement) return;
-    this.tabButtonsElemenet = this.rootElement.querySelectorAll(
+    this.tabButtonsElement = this.rootElement.querySelectorAll(
       this.selectors.tabButtons
     );
     this.tabContentsElement = this.rootElement.querySelectorAll(
@@ -28,28 +29,64 @@ class Tabs {
     this.tabLoadMoreElement = this.rootElement.querySelector(
       this.selectors.tabLoadMore
     );
+    this.activeTabCategory = "coffee";
     this.bindEvents();
   }
 
   bindEvents() {
     this.renderAllCards();
     this.tabsButtonEvents();
+    this.checkWindowSize();
+    this.loadMoreEvents();
+    this.visibleLoadMoreButton();
   }
 
+  loadMoreEvents() {
+    this.tabLoadMoreElement.addEventListener("click", this.visibleAllCards);
+  }
+
+  visibleAllCards = () => {
+    this.rootElement
+      .querySelector(`#tabpanel-${this.activeTabCategory}`)
+      .classList.add(this.stateClasses.isVisible);
+    this.tabLoadMoreElement.classList.remove(this.stateClasses.isActive);
+  };
+
+  checkWindowSize() {
+    window.addEventListener("resize", this.visibleLoadMoreButton);
+  }
+
+  visibleLoadMoreButton = () => {
+    if (
+      cardsData[this.activeTabCategory].length > 4 &&
+      window.innerWidth < 1100
+    ) {
+      this.tabLoadMoreElement.classList.add(this.stateClasses.isActive);
+    } else {
+      this.tabLoadMoreElement.classList.remove(this.stateClasses.isActive);
+    }
+  };
+
   tabsButtonEvents() {
-    this.tabButtonsElemenet.forEach((button) => {
+    this.tabButtonsElement.forEach((button) => {
       button.addEventListener("click", (e) => {
         const getButtonId = e.currentTarget.id.replace("tab-", "");
         const getPanelAria = e.currentTarget
           .getAttribute("aria-controls")
           .replace("tabpanel-", "");
+        this.tabContentsElement.forEach((content) => {
+          content.classList.remove(this.stateClasses.isVisible);
+        });
         this.switchTab(getButtonId, getPanelAria);
+        this.visibleLoadMoreButton();
       });
     });
   }
 
   switchTab(tabId, panelAria) {
-    this.tabButtonsElemenet.forEach((button) => {
+    this.activeTabCategory = panelAria;
+
+    this.tabButtonsElement.forEach((button) => {
       const isActiveButton = button.id === `tab-${tabId}`;
       button.classList.toggle(this.stateClasses.isActive, isActiveButton);
       button.setAttribute(this.stateAria.ariaSelected, isActiveButton);
