@@ -19,6 +19,7 @@ class Modal {
 
   stateClasses = {
     isActive: "is-active",
+    isLock: "is-lock",
   };
 
   constructor() {
@@ -80,6 +81,7 @@ class Modal {
     this.modalElement.classList.toggle(this.stateClasses.isActive);
     this.modalElement.addEventListener("click", this.closeModalClickOverlay);
     this.modalButtonElement.addEventListener("click", this.closeModal);
+    document.documentElement.classList.add(this.stateClasses.isLock);
   };
 
   closeModalClickOverlay = (e) => {
@@ -88,6 +90,7 @@ class Modal {
       this.price = 0;
       this.selectSizePrice = 0;
       this.selectAdditivesPrices = [];
+      document.documentElement.classList.remove(this.stateClasses.isLock);
     }
   };
 
@@ -97,6 +100,7 @@ class Modal {
     this.price = 0;
     this.selectSizePrice = 0;
     this.selectAdditivesPrices = [];
+    document.documentElement.classList.remove(this.stateClasses.isLock);
   };
 
   bindFormEvents() {
